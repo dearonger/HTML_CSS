@@ -9,5 +9,11 @@ new fullpage("#fullpage", {
     "#8ac060"
   ],
   verticalCentered: false,
-  navigation: true
+  navigation: true,
+  afterLode: function a(link, index) {
+    //不触发
+    $(".section")
+      .eq(index - 1)
+      .addClass("now");
+  }
 });
