@@ -45,6 +45,13 @@ $(function() {
       $(".move").on("click", function() {
         $.fn.fullpage.moveSectionDown = function() {};
       });
+      $(".screen04 .sofa").on("transitionend", function() {
+        $(".screen04 .address")
+          .show()
+          .find("img:last")
+          .fadeIn(1000);
+        $(".screen04").addClass("show");
+      });
     }
   });
 });
